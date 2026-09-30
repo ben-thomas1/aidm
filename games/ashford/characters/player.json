@@ -1,0 +1,22 @@
+{
+  "slug": "player",
+  "type": "character",
+  "name": "You",
+  "health": 100,
+  "money": 30,
+  "stamina": 100,
+  "current_location": "harbor",
+  "status": "weary",
+  "relationships": {
+    "mara": {
+      "value": 35,
+      "note": "The harbormaster hired you off the dock; you don't know her yet."
+    }
+  },
+  "last_simulated_turn": 0,
+  "last_seen_turn": 0,
+  "race": "human",
+  "background": "a coast-hopping salvager who follows wrecks for a living, light on coin and lighter on attachments",
+  "traits": [],
+  "conditions": []
+}

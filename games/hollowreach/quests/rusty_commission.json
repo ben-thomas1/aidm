@@ -1,0 +1,10 @@
+{
+  "slug": "rusty_commission",
+  "type": "quest",
+  "name": "The Rusty Commission",
+  "status": "active",
+  "description": "Garrick was hired to forge a festival blade, but the iron he was handed rusts as fast as he works it. He suspects sabotage.",
+  "involves": [
+    "garrick"
+  ]
+}

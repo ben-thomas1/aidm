@@ -1,0 +1,29 @@
+{
+  "slug": "mira",
+  "type": "character",
+  "name": "Mira",
+  "health": 100,
+  "money": 15,
+  "stamina": 60,
+  "current_location": "square",
+  "status": "observing",
+  "last_simulated_turn": 0,
+  "last_seen_turn": 0,
+  "race": "human",
+  "role": "herbalist",
+  "personality": "watchful, kind, hard to fool",
+  "regen": {
+    "stamina": {
+      "rate": 3,
+      "min": 0,
+      "max": 100
+    }
+  },
+  "current_goal": "Find out who has been fouling the town well before someone dies.",
+  "traits": [
+    "watchful",
+    "kind",
+    "hard to fool"
+  ],
+  "conditions": []
+}

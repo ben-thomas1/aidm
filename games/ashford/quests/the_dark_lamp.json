@@ -1,0 +1,11 @@
+{
+  "slug": "the_dark_lamp",
+  "type": "quest",
+  "name": "The Dark Lamp",
+  "status": "active",
+  "description": "The Ashford Light has gone dark and its keeper has vanished. Ships are breaking on the point. Find the keeper, learn what happened, and relight the lamp.",
+  "involves": [
+    "corin",
+    "mara"
+  ]
+}

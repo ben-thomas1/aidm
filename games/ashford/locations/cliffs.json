@@ -1,0 +1,11 @@
+{
+  "slug": "cliffs",
+  "type": "location",
+  "name": "The Cliff Path",
+  "status": "windswept",
+  "description": "A goat-track of wet rock climbing the headland, hemmed by gorse and a long drop to the surf. The wind up here never stops talking.",
+  "connections": [
+    "harbor",
+    "lighthouse"
+  ]
+}

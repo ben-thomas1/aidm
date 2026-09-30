@@ -1,0 +1,10 @@
+{
+  "slug": "the_cliff_lights",
+  "type": "quest",
+  "name": "Lights on the Cliffs",
+  "status": "active",
+  "description": "Selma swears she has seen lanterns moving on the headland the very nights ships founder. Find out who is up there, and why.",
+  "involves": [
+    "selma"
+  ]
+}

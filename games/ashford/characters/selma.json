@@ -1,0 +1,31 @@
+{
+  "slug": "selma",
+  "type": "character",
+  "name": "Selma",
+  "health": 80,
+  "money": 25,
+  "stamina": 60,
+  "current_location": "market",
+  "status": "shaken",
+  "relationships": {},
+  "last_simulated_turn": 0,
+  "last_seen_turn": 0,
+  "race": "human",
+  "role": "fisher",
+  "personality": "weathered, blunt, badly spooked",
+  "virtue": "stubbornly honest",
+  "regen": {
+    "stamina": {
+      "rate": -6,
+      "min": 0,
+      "max": 100
+    }
+  },
+  "current_goal": "Make someone believe the lights on the cliffs are no accident.",
+  "traits": [
+    "weathered",
+    "blunt",
+    "badly spooked"
+  ],
+  "conditions": []
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "mara",
+  "type": "character",
+  "name": "Harbormaster Mara",
+  "health": 95,
+  "money": 120,
+  "stamina": 80,
+  "current_location": "harbor",
+  "status": "on duty",
+  "relationships": {
+    "corin": {
+      "value": 40,
+      "note": "The keeper's apprentice; she wants to trust him but he dodges every question."
+    }
+  },
+  "last_simulated_turn": 0,
+  "last_seen_turn": 0,
+  "race": "human",
+  "role": "harbormaster",
+  "personality": "brisk, fair, fraying at the edges with worry",
+  "virtue": "dutiful to a fault",
+  "regen": {
+    "stamina": {
+      "rate": -5,
+      "min": 0,
+      "max": 100
+    }
+  },
+  "current_goal": "Stop ships from foundering on the dark point before the autumn convoy arrives.",
+  "traits": [
+    "brisk",
+    "fair",
+    "fraying at the edges with worry"
+  ],
+  "conditions": []
+}

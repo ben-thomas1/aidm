@@ -1,0 +1,15 @@
+{
+  "title": "The Hollowreach Commission",
+  "synopsis": "A weathered river-town where an old debt and a half-finished blade pull you into other people's troubles.",
+  "goal": { "description": "Recover the stolen Hollow Ledger and decide who in Hollowreach answers for it." },
+  "player": "player",
+  "hard_rules": [
+    { "id": "no_resurrection", "kind": "forbid_event_type", "type": "revive" }
+  ],
+  "background_event_chance": 0.15,
+  "outline": [
+    { "id": "bad_iron", "description": "The truth behind Garrick's rusting iron surfaces.", "hint": "once the player investigates the commission or the forge" },
+    { "id": "ledger_found", "description": "The stolen Hollow Ledger is recovered.", "hint": "as the player follows the debt" },
+    { "id": "reckoning", "description": "Someone in Hollowreach is held to account for the theft." }
+  ]
+}

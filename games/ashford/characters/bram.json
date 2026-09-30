@@ -1,0 +1,36 @@
+{
+  "slug": "bram",
+  "type": "character",
+  "name": "Bram",
+  "health": 90,
+  "money": 200,
+  "stamina": 75,
+  "current_location": "tavern",
+  "status": "pouring drinks",
+  "relationships": {
+    "selma": {
+      "value": 55,
+      "note": "A regular; he's worried since she started raving about lights on the cliffs."
+    }
+  },
+  "last_simulated_turn": 0,
+  "last_seen_turn": 0,
+  "race": "human",
+  "role": "tavernkeeper of the Salt & Anchor",
+  "personality": "loud, nosy, secretly kind",
+  "vice": "skims a little from the till",
+  "regen": {
+    "stamina": {
+      "rate": -4,
+      "min": 0,
+      "max": 100
+    }
+  },
+  "current_goal": "Keep the Salt & Anchor full and the gossip flowing.",
+  "traits": [
+    "loud",
+    "nosy",
+    "secretly kind"
+  ],
+  "conditions": []
+}

@@ -1,0 +1,17 @@
+{
+  "title": "The Ashford Light",
+  "synopsis": "Fog swallows the harbor town of Ashford, the great lighthouse stands dark, and ships are breaking on the rocks. You came chasing salvage — and walked into a vanishing.",
+  "goal": {
+    "description": "Discover what became of the lighthouse keeper and relight the Ashford Light before the autumn convoy founders on the point."
+  },
+  "player": "player",
+  "hard_rules": [
+    { "id": "no_resurrection", "kind": "forbid_event_type", "type": "revive" }
+  ],
+  "background_event_chance": 0.15,
+  "outline": [
+    { "id": "keeper_fate", "description": "What became of the lighthouse keeper comes to light.", "hint": "once the player presses Corin or searches the lighthouse" },
+    { "id": "cliff_lights", "description": "The source of the lights on the cliffs is uncovered.", "hint": "after Selma's account leads the player to the headland" },
+    { "id": "lamp_relit", "description": "The Ashford Light burns again before the convoy arrives." }
+  ]
+}

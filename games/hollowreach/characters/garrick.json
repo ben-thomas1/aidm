@@ -1,0 +1,29 @@
+{
+  "slug": "garrick",
+  "type": "character",
+  "name": "Garrick",
+  "health": 90,
+  "money": 40,
+  "stamina": 70,
+  "current_location": "forge",
+  "status": "working",
+  "last_simulated_turn": 0,
+  "last_seen_turn": 0,
+  "race": "human",
+  "role": "blacksmith",
+  "personality": "gruff, loyal, stubborn",
+  "regen": {
+    "stamina": {
+      "rate": -8,
+      "min": 0,
+      "max": 100
+    }
+  },
+  "current_goal": "Finish forging the commissioned blade before the festival, despite the bad iron.",
+  "traits": [
+    "gruff",
+    "loyal",
+    "stubborn"
+  ],
+  "conditions": []
+}

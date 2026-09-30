@@ -1,0 +1,12 @@
+{
+  "llm": {
+    "model": "claude-sonnet-4-6",
+    "timeout_s": 120.0,
+    "max_tokens": 8192,
+    "provider": {
+      "type": "vertex",
+      "region": "global",
+      "project_id": "your-gcp-project"
+    }
+  }
+}

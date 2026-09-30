@@ -1,0 +1,340 @@
+# ============================================================================
+# ty Configuration - Comprehensive Example
+# ty is an extremely fast Python type checker from Astral (creators of Ruff & uv)
+# Docs: https://docs.astral.sh/ty/
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# Rule Configuration
+# ----------------------------------------------------------------------------
+
+[rules]
+# Core type checking rules
+possibly-unresolved-reference = "error"
+unresolved-import = "error"
+invalid-assignment = "error"
+invalid-return-type = "error"
+invalid-argument-type = "error"
+invalid-type-form = "error"
+invalid-syntax-in-forward-annotation = "error"
+
+# Runtime errors
+division-by-zero = "warn"  # Can have false positives, set to "error" if desired
+index-out-of-bounds = "error"
+call-non-callable = "error"
+invalid-base = "error"
+invalid-raise = "error"
+invalid-exception-caught = "error"
+
+# Method and class errors
+invalid-method-override = "error"
+invalid-explicit-override = "error"
+abstract-method-in-final-class = "error"
+cyclic-class-definition = "error"
+conflicting-metaclass = "error"
+inconsistent-mro = "error"
+duplicate-base = "error"
+
+# Generic and type variable errors
+invalid-legacy-type-variable = "error"
+invalid-type-variable-constraints = "error"
+invalid-type-variable-bound = "error"
+invalid-type-arguments = "error"
+invalid-generic-class = "error"
+
+# Function and parameter errors
+missing-argument = "error"
+invalid-parameter-default = "error"
+invalid-overload = "error"
+no-matching-overload = "error"
+
+# Special class types
+invalid-dataclass = "error"
+invalid-dataclass-override = "error"
+dataclass-field-order = "error"
+invalid-frozen-dataclass-subclass = "error"
+duplicate-kw-only = "error"
+invalid-named-tuple = "error"
+invalid-protocol = "error"
+ambiguous-protocol-member = "warn"
+invalid-typed-dict-header = "error"
+invalid-typed-dict-statement = "error"
+missing-typed-dict-key = "error"
+
+# Type aliases
+invalid-type-alias-type = "error"
+cyclic-type-alias-definition = "error"
+
+# Context managers and special methods
+invalid-context-manager = "error"
+invalid-await = "error"
+invalid-total-ordering = "error"
+
+# Type guards
+invalid-type-guard-call = "error"
+invalid-type-guard-definition = "error"
+
+# Runtime type checking
+isinstance-against-protocol = "error"
+isinstance-against-typed-dict = "error"
+
+# Ignore comments
+invalid-ignore-comment = "warn"
+ignore-comment-unknown-rule = "warn"
+
+# Deprecations and warnings
+deprecated = "warn"
+ineffective-final = "warn"
+invalid-legacy-positional-parameter = "warn"
+
+# String annotations
+raw-string-type-annotation = "error"
+escape-character-in-forward-annotation = "error"
+implicit-concatenated-string-type-annotation = "error"
+
+# Miscellaneous
+conflicting-declarations = "error"
+instance-layout-conflict = "error"
+invalid-attribute-access = "error"
+invalid-declaration = "error"
+invalid-key = "error"
+invalid-super-argument = "error"
+final-without-value = "error"
+empty-body = "warn"  # Set to "error" for strict enforcement
+
+# Type assertion helpers
+# assert-type-unspellable-subtype = "error"
+# type-assertion-failure = "error"
+
+# Additional rules - uncomment as needed
+# call-top-callable = "error"
+# conflicting-argument-forms = "error"
+# invalid-generic-enum = "error"
+# invalid-metaclass = "error"
+# invalid-newtype = "error"
+# invalid-paramspec = "error"
+# invalid-type-checking-constant = "error"
+# non-overlapping-type-narrow = "warn"
+# possibly-undefined-name = "error"
+# redundant-literal-union = "warn"
+# shadowed-import = "warn"
+# type-guard-invariance-violation = "error"
+# unavailable-feature = "error"
+# unexpected-keyword-argument = "error"
+# unreachable-code = "warn"
+# unused-ignore-comment = "warn"
+
+# ----------------------------------------------------------------------------
+# Analysis Configuration
+# ----------------------------------------------------------------------------
+
+[analysis]
+# Modules for which unresolved-import diagnostics should be suppressed
+# Uses glob patterns:
+# - foo.* matches foo.bar but not foo.bar.baz
+# - foo.** matches foo, foo.bar, foo.bar.baz, etc.
+# - *test* matches any module with "test" in the name
+# - !pattern excludes matching modules
+allowed-unresolved-imports = [
+    # Example: Third-party packages without type stubs
+    # "some_untyped_package.**",
+
+    # Example: Optional dependencies
+    # "optional_dep.**",
+
+    # Example: Allow all test modules except specific ones
+    # "test.**",
+    # "!test.critical_module",
+]
+
+# Whether to respect `type: ignore` comments
+# Set to false to only use `ty: ignore` comments
+respect-type-ignore-comments = true
+
+# ----------------------------------------------------------------------------
+# Environment Configuration
+# ----------------------------------------------------------------------------
+
+[environment]
+# Path to your Python environment or interpreter
+# ty will auto-detect from VIRTUAL_ENV, .venv, or activated conda env
+# Only set this if you have a custom location
+# python = "./.venv"
+# python = "/usr/local/bin/python3.12"
+
+# Additional search paths for module resolution
+# Similar to PYTHONPATH or mypy's MYPYPATH
+# Use this for unconventionally-located first-party or third-party code
+extra-paths = [
+    # "./shared/my-search-path",
+    # "./vendor",
+]
+
+# Python version target for type checking
+# Format: "M.m" (e.g., "3.12")
+# If not specified, ty will:
+# 1. Check project.requires-python in pyproject.toml
+# 2. Infer from your Python environment
+# 3. Default to "3.14"
+python-version = "3.14"
+
+# Target platform for sys.platform conditionals
+# Options: "win32", "darwin", "android", "ios", "linux", "all"
+# Defaults to current platform
+# python-platform = "linux"
+# python-platform = "all"  # Check for all platforms
+
+# Project root paths for first-party module resolution
+# Priority order: first path has highest priority
+# If not specified, ty auto-detects:
+# - If ./src exists: [, "./src"]
+# - If ./<project>/<project> exists: [".", "./<project>"]
+# - Otherwise: ["."]
+root = [
+    ".",
+    "./src",
+]
+
+# Custom typeshed directory (optional)
+# By default, ty uses its bundled typeshed stubs
+# typeshed = "/path/to/custom/typeshed"
+
+# ----------------------------------------------------------------------------
+# Source File Configuration
+# ----------------------------------------------------------------------------
+
+[src]
+# Files and directories to include in type checking
+# Glob patterns anchored to project root
+# If not specified, ty checks all Python files not excluded
+include = [
+    "src/**/*.py",
+    "tests/**/*.py",
+]
+
+# Files and directories to exclude from type checking
+# Gitignore-style patterns:
+# - ./src/ matches only directory
+# - ./src matches both files and directories
+# - * matches any sequence of chars (except /)
+# - ** matches zero or more path components
+# - ? matches any single character
+# - [abc] matches characters in brackets
+# - !pattern negates exclusion
+exclude = [
+    # By default, ty excludes common directories:
+    # .git, .venv, __pycache__, node_modules, etc.
+
+    # Project-specific exclusions
+    "**/*_pb2.py",           # Generated protobuf files
+    "**/*_pb2.pyi",
+
+    # Re-include something that would be excluded
+    # "!important_file.py",
+]
+
+# Whether to respect .gitignore, .ignore, and other ignore files
+respect-ignore-files = true
+
+# DEPRECATED: Use environment.root instead
+# root = "."
+
+# ----------------------------------------------------------------------------
+# Override Configuration
+# ----------------------------------------------------------------------------
+
+# Overrides allow applying different rules to specific files
+# Multiple overrides can match; later ones take precedence
+
+# Example: Relax rules for test files
+[[overrides]]
+include = ["tests/**", "**/test_*.py"]
+
+[overrides.rules]
+possibly-unresolved-reference = "warn"
+invalid-assignment = "warn"
+invalid-argument-type = "warn"
+empty-body = "ignore"
+
+[overrides.analysis]
+# Allow unresolved test utilities
+allowed-unresolved-imports = [
+    "pytest.**",
+    "unittest.**",
+]
+
+# Example: Ignore generated files but keep one important file
+[[overrides]]
+include = ["generated/**"]
+exclude = ["generated/important.py"]
+
+[overrides.rules]
+possibly-unresolved-reference = "ignore"
+invalid-assignment = "ignore"
+
+# Example: Different rules for scripts
+[[overrides]]
+include = ["scripts/**", "**/cli.py"]
+
+[overrides.rules]
+empty-body = "ignore"
+invalid-return-type = "warn"
+
+# ----------------------------------------------------------------------------
+# Terminal/Output Configuration
+# ----------------------------------------------------------------------------
+
+[terminal]
+# Output format for diagnostics
+# Options: "full" (detailed), "concise" (compact)
+output-format = "full"
+
+# Treat warnings as errors (exit code 1 on warnings)
+error-on-warning = false
+
+# ----------------------------------------------------------------------------
+# Integration Examples
+# ----------------------------------------------------------------------------
+
+# Example: Monorepo with multiple projects
+# [[overrides]]
+# include = ["project-a/**"]
+# [overrides.environment]
+# root = [".", "./project-a/src"]
+
+# [[overrides]]
+# include = ["project-b/**"]
+# [overrides.environment]
+# root = [".", "./project-b/src"]
+
+# Example: Gradual typing - strict for new code
+# [[overrides]]
+# include = ["src/new_features/**"]
+# [overrides.rules]
+# invalid-assignment = "error"
+# invalid-return-type = "error"
+# invalid-argument-type = "error"
+# empty-body = "error"
+
+# [[overrides]]
+# include = ["src/legacy/**"]
+# [overrides.rules]
+# invalid-assignment = "warn"
+# invalid-return-type = "warn"
+# empty-body = "ignore"
+
+# Example: Different strictness for public API
+# [[overrides]]
+# include = ["src/**/api.py", "src/**/public/**"]
+# [overrides.rules]
+# invalid-assignment = "error"
+# invalid-return-type = "error"
+# invalid-argument-type = "error"
+# invalid-method-override = "error"
+
+# Example: Allow more lenient checking in data processing scripts
+# [[overrides]]
+# include = ["scripts/data_processing/**"]
+# [overrides.rules]
+# invalid-assignment = "warn"
+# possibly-unresolved-reference = "warn"

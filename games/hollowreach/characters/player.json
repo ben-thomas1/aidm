@@ -1,0 +1,21 @@
+{
+  "slug": "player",
+  "type": "character",
+  "name": "You",
+  "health": 100,
+  "money": 25,
+  "current_location": "square",
+  "status": "alert",
+  "relationships": {
+    "garrick": {
+      "value": 65,
+      "note": "Old friend from the courier days; you owe him a favour."
+    }
+  },
+  "last_simulated_turn": 0,
+  "last_seen_turn": 0,
+  "race": "human",
+  "background": "a former river courier, new debts, old instincts",
+  "traits": [],
+  "conditions": []
+}

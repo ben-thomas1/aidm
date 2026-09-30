@@ -1,0 +1,12 @@
+{
+  "slug": "harbor",
+  "type": "location",
+  "name": "Ashford Harbor",
+  "status": "fogbound",
+  "description": "A crook of grey water lined with tar-black piers. Fog rolls in off the sea and the masts of a half-sunk trader lean against the murk.",
+  "connections": [
+    "market",
+    "tavern",
+    "cliffs"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "slug": "lantern",
+  "type": "item",
+  "name": "Salvager's Lantern",
+  "owner": "player",
+  "description": "A battered storm-lantern with a stub of candle. It throws a small, stubborn light."
+}

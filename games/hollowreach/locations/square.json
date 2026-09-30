@@ -1,0 +1,10 @@
+{
+  "slug": "square",
+  "type": "location",
+  "name": "Hollowreach Square",
+  "status": "busy",
+  "description": "A cobbled market square ringed by leaning timber houses; a dry fountain sits at its centre.",
+  "connections": [
+    "forge"
+  ]
+}

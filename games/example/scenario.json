@@ -1,0 +1,8 @@
+{
+  "title": "A Quiet Clearing",
+  "synopsis": "You wake in a still forest clearing, the trees keeping their counsel. The path out is yours to choose.",
+  "goal": null,
+  "player": "player",
+  "hard_rules": [],
+  "background_event_chance": 0.05
+}

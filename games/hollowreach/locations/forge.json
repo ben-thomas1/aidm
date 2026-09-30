@@ -1,0 +1,10 @@
+{
+  "slug": "forge",
+  "type": "location",
+  "name": "Garrick's Forge",
+  "status": "smoky",
+  "description": "A soot-stained smithy off the square; heat rolls from the coal-bed and half-worked iron rests on the anvil.",
+  "connections": [
+    "square"
+  ]
+}

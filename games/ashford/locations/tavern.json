@@ -1,0 +1,11 @@
+{
+  "slug": "tavern",
+  "type": "location",
+  "name": "The Salt & Anchor",
+  "status": "lively",
+  "description": "Low beams, a peat fire, and the smell of spilled ale. It is the one warm room in Ashford, and tonight it is full of people who would rather not go home.",
+  "connections": [
+    "harbor",
+    "market"
+  ]
+}

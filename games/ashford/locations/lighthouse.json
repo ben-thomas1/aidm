@@ -1,0 +1,10 @@
+{
+  "slug": "lighthouse",
+  "type": "location",
+  "name": "Ashford Light",
+  "status": "dark",
+  "description": "A tall white tower gone grey with neglect. The great lamp at its crown is cold and black, and the door at its foot stands locked.",
+  "connections": [
+    "cliffs"
+  ]
+}

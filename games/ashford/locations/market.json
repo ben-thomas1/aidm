@@ -1,0 +1,11 @@
+{
+  "slug": "market",
+  "type": "location",
+  "name": "Ashford Market",
+  "status": "quiet",
+  "description": "A handful of stalls under salt-stiff awnings. Fewer than half are open; the fishmongers have little to sell since the boats stopped going out.",
+  "connections": [
+    "harbor",
+    "tavern"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "corin",
+  "type": "character",
+  "name": "Corin",
+  "health": 85,
+  "money": 60,
+  "stamina": 70,
+  "current_location": "cliffs",
+  "status": "watchful",
+  "relationships": {
+    "mara": {
+      "value": 30,
+      "note": "He avoids her; she asks too many questions."
+    }
+  },
+  "last_simulated_turn": 0,
+  "last_seen_turn": 0,
+  "race": "human",
+  "role": "lighthouse apprentice",
+  "personality": "polite, evasive, frightened",
+  "secret": "He took coin from wreckers to keep the lamp dark; the keeper caught him on the cliff path, and in the struggle the old man went over the edge.",
+  "vice": "cowardice",
+  "regen": {
+    "stamina": {
+      "rate": -7,
+      "min": 0,
+      "max": 100
+    }
+  },
+  "current_goal": "Hide what really happened to the keeper.",
+  "traits": [
+    "polite",
+    "evasive",
+    "frightened"
+  ],
+  "conditions": []
+}

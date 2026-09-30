@@ -1,0 +1,42 @@
+.serena
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Tooling caches
+.ruff_cache/
+.pytest_cache/
+.ty_cache/
+
+# Local infra config (copy from examples/) — personal / may hold secrets, never commit
+/config*.json
+
+# REPL history
+/.aidm_history
+
+# Game saves (per technical-design.md §2)
+saves/
+
+# Dev notes
+misc/
+
+# Historical design drafts and local playtest notes; README describes this release
+/spec/
+
+# Old Git metadata must never be published
+/gitbackup/
+
+# Build output, local credentials, and diagnostics
+/dist/
+/build/
+*.egg-info/
+.env
+.env.*
+*.pem
+*.key
+*.log
+.coverage
+htmlcov/
+.DS_Store

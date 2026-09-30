@@ -1,0 +1,10 @@
+{
+  "slug": "player",
+  "type": "character",
+  "name": "You",
+  "health": 100,
+  "money": 10,
+  "current_location": "clearing",
+  "traits": [],
+  "conditions": []
+}

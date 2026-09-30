@@ -1,0 +1,9 @@
+{
+  "llm": {
+    "base_url": "URL",
+    "model": "MODEL_NAME",
+    "api_key": "API_KEY",
+    "timeout_s": 120.0,
+    "max_tokens": 8192
+  }
+}
